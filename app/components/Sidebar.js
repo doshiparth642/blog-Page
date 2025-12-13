@@ -90,7 +90,7 @@ export default function Sidebar({
                   <div className="shrink-0 rating-inline">
                     <Rating initialValue={rating} size={20} readonly />
                   </div>
-                  <span className="font-light mt-1">
+                  <span className="mt-1 font-semibold text-gray-800">
                     ({parseFloat(rating).toFixed(1)})
                   </span>
                 </div>
