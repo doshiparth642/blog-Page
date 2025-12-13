@@ -22,7 +22,7 @@ export default function RelatedArticles({ currentArticleId, category }) {
 
   return (
     <div className="sm:mt-12 lg:mt-25 sm:bg-gray-100 p-5">
-      <h2 className="text-center text-xl sm:text-4xl font-semibold mt-15 text-gray-700">
+      <h2 className="text-center text-xl sm:text-4xl font-semibold mt-8 text-gray-700">
         Related articles
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:px-5 xl:px-30 mt-15">

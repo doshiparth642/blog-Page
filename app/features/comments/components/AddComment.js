@@ -179,7 +179,14 @@ const AddComment = ({ articleId }) => {
           className="bg-black text-white sm:px-5 py-3 justify-center rounded-2xl flex items-center gap-2 mt-4 md:mt-0 cursor-pointer w-full sm:w-auto text-center disabled:opacity-50"
         >
           <Image src={SendIcon} width={18} height={18} alt="Send" />
-          {formik.isSubmitting ? "Sending..." : "Send"}
+          {/* Mobile */}
+          <span className="sm:hidden">
+            {formik.isSubmitting ? "Sending Comment..." : "Send Comment"}
+          </span>
+          {/* Desktop */}
+          <span className="hidden sm:inline">
+            {formik.isSubmitting ? "Sending..." : "Send"}
+          </span>{" "}
         </button>
       </div>
       {formik.touched.rating && formik.errors.rating ? (
