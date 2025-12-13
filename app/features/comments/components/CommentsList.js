@@ -32,7 +32,7 @@ export default function CommentsList({ comments }) {
                         <div className="shrink-0 rating-inline">
                           <Rating initialValue={rating} size={20} readonly />
                         </div>
-                        <p className="font-light text-sm mt-2">
+                        <p className="text-sm mt-2 font-semibold text-gray-800">
                           ({parseFloat(rating).toFixed(1)})
                         </p>
                       </div>
@@ -43,7 +43,7 @@ export default function CommentsList({ comments }) {
                   </div>
 
                   {/* Comment */}
-                  <p className="text-gray-700 mt-2">{comment}</p>
+                  <p className="text-gray-500 font-semibold mt-2">{comment}</p>
                 </div>
               </div>
 

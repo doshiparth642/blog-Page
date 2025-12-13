@@ -5,19 +5,23 @@ import { article as allArticles } from "../../../constants/index";
 export default function RelatedArticles({ currentArticleId, category }) {
   // Filter for articles that are in the same category but are not the current article.
   const related = allArticles.filter((article) => {
-    return article.id !== currentArticleId && article.category === category;
+    return (
+      article.id !== currentArticleId && 
+      article.category === category 
+    );
   });
 
   // Filter for articles that are in a different category and are not the current article.
   const otherArticles = allArticles.filter(
     (article) =>
-      article.id !== currentArticleId && article.category !== category
+      article.id !== currentArticleId && 
+      article.category !== category 
   );
 
   const articles = [...related, ...otherArticles].slice(0, 4);
 
   return (
-    <div className="mt-10 sm:mt-12 lg:mt-25 sm:bg-gray-100 p-5">
+    <div className="sm:mt-12 lg:mt-25 sm:bg-gray-100 p-5">
       <h2 className="text-center text-xl sm:text-4xl font-semibold mt-15 text-gray-700">
         Related articles
       </h2>
